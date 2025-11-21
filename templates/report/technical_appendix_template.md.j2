@@ -1,0 +1,24 @@
+# Техническое приложение
+
+## Инвентаризация (резюме)
+- Всего узлов: {{ inventory.total_nodes }}
+- По ОС: {% for os, count in inventory.os_distribution.items() %}{{ os }}={{ count }} {% endfor %}
+- По окружениям: {% for env, count in inventory.environment_distribution.items() %}{{ env }}={{ count }} {% endfor %}
+
+## Результаты чек-листов
+{% for checklist in checklists %}
+### {{ checklist.name }}
+Описание: {{ checklist.description }}
+
+| ID | Вопрос | Статус | Вес | Ответ |
+| --- | --- | --- | --- | --- |
+{% for item in checklist.controls %}| {{ item.id }} | {{ item.title }} | {{ item.status }} | {{ item.weight }} | {{ item.answer }} |
+{% endfor %}
+
+{% endfor %}
+
+## Сводные риски
+| ID | Заголовок | Уровень | Рекомендация |
+| --- | --- | --- | --- |
+{% for risk in risks %}| {{ risk.id }} | {{ risk.title }} | {{ risk.level }} | {{ risk.recommendation }} |
+{% endfor %}

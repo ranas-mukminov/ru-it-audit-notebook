@@ -1,0 +1,6 @@
+# Реестр рисков
+
+| ID | Описание | Вероятность | Влияние | Приоритет | Ответственный |
+| --- | --- | --- | --- | --- | --- |
+{% for risk in risks %}| {{ risk.id }} | {{ risk.description }} | {{ risk.likelihood }} | {{ risk.impact }} | {{ risk.priority }} | {{ risk.owner }} |
+{% endfor %}

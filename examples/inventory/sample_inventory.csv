@@ -1,0 +1,5 @@
+hostname,role,os,environment,owner,backup
+srv-app-01,app,Ubuntu 22.04,prod,IT,yes
+srv-db-01,database,PostgreSQL on Debian 11,prod,DBA,yes
+srv-dev-01,dev,Ubuntu 20.04,dev,Dev,planned
+srv-legacy-01,legacy,CentOS 7,prod,Ops,no

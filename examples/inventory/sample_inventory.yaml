@@ -1,0 +1,25 @@
+servers:
+  - hostname: srv-app-01
+    role: app
+    os: Ubuntu 22.04
+    environment: prod
+    owner: IT
+    backup: yes
+  - hostname: srv-db-01
+    role: database
+    os: Debian 11
+    environment: prod
+    owner: DBA
+    backup: yes
+  - hostname: srv-dev-01
+    role: dev
+    os: Ubuntu 20.04
+    environment: dev
+    owner: Dev
+    backup: planned
+  - hostname: srv-legacy-01
+    role: legacy
+    os: CentOS 7
+    environment: prod
+    owner: Ops
+    backup: no

@@ -1,0 +1,74 @@
+metadata:
+  name: "Инвентаризация ИТ-ландшафта"
+  version: "0.1"
+  description: "Базовый перечень серверов, сервисов и ответственных."
+controls:
+  - id: INV-001
+    section: ownership
+    title_ru: "Назначены владельцы систем"
+    description_ru: "Для каждой системы определён бизнес-владелец и технический куратор."
+    tags: ["inventory", "ownership"]
+    answer_type: boolean
+    artifacts:
+      - "Реестр систем с указанием владельцев"
+    scoring:
+      weight: 3
+      ok: [true, "yes"]
+      warning: ["partial"]
+      critical: [false, "no"]
+
+  - id: INV-002
+    section: os_freshness
+    title_ru: "Поддерживаемые версии ОС"
+    description_ru: "Все серверы работают на поддерживаемых версиях ОС."
+    tags: ["inventory", "os"]
+    answer_type: choice
+    artifacts:
+      - "Скан инвентаризации с версиями ОС"
+    scoring:
+      weight: 2
+      ok: ["supported"]
+      warning: ["mixed"]
+      critical: ["eol", "unknown"]
+
+  - id: INV-003
+    section: backup
+    title_ru: "Наличие резервных копий для ключевых систем"
+    description_ru: "У критичных сервисов есть регулярные резервные копии."
+    tags: ["backup", "resilience"]
+    answer_type: boolean
+    artifacts:
+      - "Политики резервирования"
+    scoring:
+      weight: 3
+      ok: [true]
+      warning: ["planned"]
+      critical: [false]
+
+  - id: INV-004
+    section: environments
+    title_ru: "Разделение окружений"
+    description_ru: "Prod/Stage/Dev разделены, есть базовые сетевые барьеры."
+    tags: ["network", "segmentation"]
+    answer_type: scale
+    artifacts:
+      - "Схема сегментации сети"
+    scoring:
+      weight: 2
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: INV-005
+    section: monitoring
+    title_ru: "Базовый мониторинг и алерты"
+    description_ru: "Здоровье серверов и сервисов отслеживается, алерты доставляются."
+    tags: ["monitoring", "logging"]
+    answer_type: scale
+    artifacts:
+      - "Настройки мониторинга/логирования"
+    scoring:
+      weight: 2
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]

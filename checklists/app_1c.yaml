@@ -1,0 +1,74 @@
+metadata:
+  name: "Приложения 1С/бизнес-системы"
+  version: "0.1"
+  description: "Фокус на 1С, бухгалтерии и CRM"
+controls:
+  - id: APP1C-001
+    section: architecture
+    title_ru: "Документированная схема 1С"
+    description_ru: "Отражены серверы, БД, клиенты и интеграции."
+    tags: ["1c", "architecture"]
+    answer_type: choice
+    artifacts:
+      - "Актуальная схема 1С и интеграций"
+    scoring:
+      weight: 2
+      ok: ["current"]
+      warning: ["outdated"]
+      critical: ["absent"]
+
+  - id: APP1C-002
+    section: access
+    title_ru: "Разграничение доступа в 1С"
+    description_ru: "Роли и профили доступа настроены, есть журналирование."
+    tags: ["1c", "access_control"]
+    answer_type: scale
+    artifacts:
+      - "Настройки ролей и аудит логинов"
+    scoring:
+      weight: 3
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: APP1C-003
+    section: updates
+    title_ru: "Регулярность обновлений"
+    description_ru: "Конфигурации 1С и СУБД обновляются по регламенту."
+    tags: ["1c", "patching"]
+    answer_type: choice
+    artifacts:
+      - "Журнал обновлений"
+    scoring:
+      weight: 2
+      ok: ["monthly", "quarterly"]
+      warning: ["semiannual"]
+      critical: ["rare"]
+
+  - id: APP1C-004
+    section: backup
+    title_ru: "Резервирование баз 1С"
+    description_ru: "Бэкапы баз выполняются и проверяются восстановлением."
+    tags: ["1c", "backup"]
+    answer_type: scale
+    artifacts:
+      - "Отчёты о бэкапах и тестах восстановления"
+    scoring:
+      weight: 3
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: APP1C-005
+    section: performance
+    title_ru: "Наблюдаемость и производительность"
+    description_ru: "Собираются метрики и профили запросов по 1С."
+    tags: ["1c", "monitoring"]
+    answer_type: boolean
+    artifacts:
+      - "Дашборды мониторинга"
+    scoring:
+      weight: 2
+      ok: [true]
+      warning: ["partial"]
+      critical: [false]

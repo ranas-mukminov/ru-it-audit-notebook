@@ -1,0 +1,20 @@
+# Executive Summary
+
+## Обзор
+{{ summary.overview if summary.overview else "Краткое описание результатов аудита." }}
+
+## Главные риски
+{% for risk in summary.top_risks %}- **{{ risk.title }}** — {{ risk.description }} (приоритет: {{ risk.priority }})
+{% endfor %}
+
+## Общая оценка зрелости
+- Профиль: {{ summary.profile }}
+- Балл: {{ summary.score }}/{{ summary.max_score }}
+
+## Ключевые выводы для директора
+{% for line in summary.director_focus %}- {{ line }}
+{% endfor %}
+
+## Рекомендованные действия
+{% for item in workplan %}- [{{ item.priority }}] {{ item.area }}: {{ item.action }} (трудоёмкость: {{ item.effort }})
+{% endfor %}

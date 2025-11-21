@@ -1,0 +1,74 @@
+metadata:
+  name: "Резервирование и устойчивость"
+  version: "0.1"
+  description: "Базовые вопросы про бэкапы и восстановление"
+controls:
+  - id: BACKUP-001
+    section: coverage
+    title_ru: "Полнота охвата резервного копирования"
+    description_ru: "Ключевые сервисы и данные попадают в резервное копирование."
+    tags: ["backup", "coverage"]
+    answer_type: scale
+    artifacts:
+      - "Перечень систем с RPO/RTO"
+    scoring:
+      weight: 3
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: BACKUP-002
+    section: frequency
+    title_ru: "Частота и регламент резервирования"
+    description_ru: "Определены интервалы, расписание и контроль выполнения."
+    tags: ["backup", "process"]
+    answer_type: scale
+    artifacts:
+      - "Политика резервирования"
+    scoring:
+      weight: 2
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: BACKUP-003
+    section: recovery_tests
+    title_ru: "Тестирование восстановления"
+    description_ru: "Регулярно проверяется факт восстановления и время."
+    tags: ["backup", "drills"]
+    answer_type: choice
+    artifacts:
+      - "Протоколы тестов восстановления"
+    scoring:
+      weight: 3
+      ok: ["quarterly", "monthly"]
+      warning: ["annual"]
+      critical: ["never"]
+
+  - id: BACKUP-004
+    section: ransomware
+    title_ru: "Защищённость от ransomware"
+    description_ru: "Есть offsite/immutable копии и разделение привилегий."
+    tags: ["backup", "ransomware"]
+    answer_type: boolean
+    artifacts:
+      - "Описание offsite/immutable копий"
+    scoring:
+      weight: 3
+      ok: [true]
+      warning: ["partial"]
+      critical: [false]
+
+  - id: BACKUP-005
+    section: monitoring
+    title_ru: "Мониторинг задач резервирования"
+    description_ru: "Ошибки резервирования алертятся и разбираются."
+    tags: ["backup", "monitoring"]
+    answer_type: scale
+    artifacts:
+      - "Выдержки из системы мониторинга"
+    scoring:
+      weight: 2
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]

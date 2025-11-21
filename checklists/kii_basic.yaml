@@ -1,0 +1,74 @@
+metadata:
+  name: "Базовые вопросы по КИИ"
+  version: "0.1"
+  description: "Определение систем, похожих на объекты КИИ, и их готовность"
+controls:
+  - id: KII-001
+    section: criticality
+    title_ru: "Определена критичность сервисов"
+    description_ru: "Сервисы ранжированы по влиянию на бизнес/госфункции."
+    tags: ["kii", "criticality"]
+    answer_type: scale
+    artifacts:
+      - "Матрица критичности"
+    scoring:
+      weight: 3
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: KII-002
+    section: sectors
+    title_ru: "Принадлежность к отрасли из перечня КИИ"
+    description_ru: "Есть ли системы, относящиеся к отраслям КИИ (энергетика, связь, транспорт и т.п.)."
+    tags: ["kii", "sector"]
+    answer_type: choice
+    artifacts:
+      - "Список сервисов с отраслевой привязкой"
+    scoring:
+      weight: 2
+      ok: ["yes"]
+      warning: ["unclear"]
+      critical: ["no"]
+
+  - id: KII-003
+    section: continuity
+    title_ru: "Последствия отказа"
+    description_ru: "Оценены последствия длительного отказа сервисов."
+    tags: ["kii", "risk"]
+    answer_type: scale
+    artifacts:
+      - "BCP/DR оценки"
+    scoring:
+      weight: 2
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: KII-004
+    section: controls
+    title_ru: "Базовые меры защиты"
+    description_ru: "Существуют организационные и технические меры, сопоставимые с базовыми требованиями КИИ."
+    tags: ["kii", "controls"]
+    answer_type: scale
+    artifacts:
+      - "Политики, сегментация, журналы"
+    scoring:
+      weight: 3
+      ok: [3]
+      warning: [2]
+      critical: [0, 1]
+
+  - id: KII-005
+    section: independence
+    title_ru: "Импортонезависимость"
+    description_ru: "Оценена зависимость от зарубежного ПО и предусмотрен план импортонезависимости."
+    tags: ["kii", "independence"]
+    answer_type: choice
+    artifacts:
+      - "Реестр ПО и альтернатив"
+    scoring:
+      weight: 2
+      ok: ["planned", "local"]
+      warning: ["high-dependency"]
+      critical: ["unknown"]
