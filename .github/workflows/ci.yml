@@ -16,6 +16,11 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -e .[dev]
+          pip install ruff yamllint bandit pip-audit
+          ruff --version
+          yamllint --version
+          bandit --version
+          pip-audit --version
       - name: Lint
         run: ./scripts/lint.sh
       - name: Tests
