@@ -1,7 +1,7 @@
 from pathlib import Path
 
 import typer
-import yaml
+
 
 from it_audit_report import config, scoring
 from it_audit_report.ai.summary_generator import generate_summary

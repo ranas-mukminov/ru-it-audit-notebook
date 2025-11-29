@@ -33,7 +33,7 @@ def generate_summary(
 
     total_score = sum(result.total_score for result in checklist_results)
     max_score = sum(result.max_score for result in checklist_results) or 1.0
-    coverage_note = f"Инвентаризация: {inventory_summary.total_nodes} узлов."
+
     top_risks = _collect_top_risks(checklist_results)
     director_focus = [
         f"Профиль оценки: {profile}",
