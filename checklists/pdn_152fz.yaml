@@ -1,12 +1,16 @@
+---
 metadata:
   name: "Персональные данные / 152-ФЗ"
   version: "0.1"
-  description: "Обобщённый чек-лист по защите ПДн"
+  description: >-
+    Обобщённый чек-лист по защите ПДн
 controls:
   - id: PDN-001
     section: governance
     title_ru: "Назначен оператор/ответственный за ПДн"
-    description_ru: "Определены роли оператора и ответственного за обработку ПДн."
+    description_ru: >-
+      Определены роли оператора и ответственного за
+      обработку ПДн.
     tags: ["152-FZ", "governance"]
     answer_type: boolean
     artifacts:
@@ -20,7 +24,9 @@ controls:
   - id: PDN-002
     section: registry
     title_ru: "Ведение реестра ИСПДн"
-    description_ru: "Составлен перечень ИСПДн, каналов передачи и категорий ПДн."
+    description_ru: >-
+      Составлен перечень ИСПДн, каналов передачи и
+      категорий ПДн.
     tags: ["152-FZ", "inventory"]
     answer_type: choice
     artifacts:
@@ -34,7 +40,9 @@ controls:
   - id: PDN-003
     section: legal_basis
     title_ru: "Правовые основания обработки"
-    description_ru: "Согласия, договоры или иные основания охватывают все типы ПДн."
+    description_ru: >-
+      Согласия, договоры или иные основания охватывают
+      все типы ПДн.
     tags: ["152-FZ", "legal"]
     answer_type: choice
     artifacts:
@@ -48,7 +56,9 @@ controls:
   - id: PDN-004
     section: controls
     title_ru: "Документированные меры защиты"
-    description_ru: "Есть политика ИБ, модель угроз, положение об обработке ПДн."
+    description_ru: >-
+      Есть политика ИБ, модель угроз, положение об
+      обработке ПДн.
     tags: ["152-FZ", "policy"]
     answer_type: scale
     artifacts:
@@ -62,7 +72,9 @@ controls:
   - id: PDN-005
     section: localization
     title_ru: "Локализация ПДн граждан РФ"
-    description_ru: "Сервера и облака, содержащие ПДн РФ, располагаются в РФ."
+    description_ru: >-
+      Сервера и облака, содержащие ПДн РФ, располагаются
+      в РФ.
     tags: ["152-FZ", "localization"]
     answer_type: boolean
     artifacts:
@@ -76,7 +88,9 @@ controls:
   - id: PDN-006
     section: logging
     title_ru: "Журналирование и контроль доступа"
-    description_ru: "Логируются доступы к ИСПДн, действует ограничение прав."
+    description_ru: >-
+      Логируются доступы к ИСПДн, действует ограничение
+      прав.
     tags: ["152-FZ", "logging", "access_control"]
     answer_type: scale
     artifacts:

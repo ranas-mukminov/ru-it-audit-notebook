@@ -1,12 +1,17 @@
+---
 metadata:
   name: "Базовые вопросы по КИИ"
   version: "0.1"
-  description: "Определение систем, похожих на объекты КИИ, и их готовность"
+  description: >-
+    Определение систем, похожих на объекты КИИ, и их
+    готовность
 controls:
   - id: KII-001
     section: criticality
     title_ru: "Определена критичность сервисов"
-    description_ru: "Сервисы ранжированы по влиянию на бизнес/госфункции."
+    description_ru: >-
+      Сервисы ранжированы по влиянию на
+      бизнес/госфункции.
     tags: ["kii", "criticality"]
     answer_type: scale
     artifacts:
@@ -20,7 +25,9 @@ controls:
   - id: KII-002
     section: sectors
     title_ru: "Принадлежность к отрасли из перечня КИИ"
-    description_ru: "Есть ли системы, относящиеся к отраслям КИИ (энергетика, связь, транспорт и т.п.)."
+    description_ru: >-
+      Есть ли системы, относящиеся к отраслям КИИ
+      (энергетика, связь, транспорт и т.п.).
     tags: ["kii", "sector"]
     answer_type: choice
     artifacts:
@@ -48,7 +55,9 @@ controls:
   - id: KII-004
     section: controls
     title_ru: "Базовые меры защиты"
-    description_ru: "Существуют организационные и технические меры, сопоставимые с базовыми требованиями КИИ."
+    description_ru: >-
+      Существуют организационные и технические меры,
+      сопоставимые с базовыми требованиями КИИ.
     tags: ["kii", "controls"]
     answer_type: scale
     artifacts:
@@ -62,7 +71,9 @@ controls:
   - id: KII-005
     section: independence
     title_ru: "Импортонезависимость"
-    description_ru: "Оценена зависимость от зарубежного ПО и предусмотрен план импортонезависимости."
+    description_ru: >-
+      Оценена зависимость от зарубежного ПО и предусмотрен
+      план импортонезависимости.
     tags: ["kii", "independence"]
     answer_type: choice
     artifacts:

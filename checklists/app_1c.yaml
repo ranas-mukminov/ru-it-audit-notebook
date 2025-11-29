@@ -1,7 +1,9 @@
+---
 metadata:
   name: "Приложения 1С/бизнес-системы"
   version: "0.1"
-  description: "Фокус на 1С, бухгалтерии и CRM"
+  description: >-
+    Фокус на 1С, бухгалтерии и CRM
 controls:
   - id: APP1C-001
     section: architecture
@@ -20,7 +22,9 @@ controls:
   - id: APP1C-002
     section: access
     title_ru: "Разграничение доступа в 1С"
-    description_ru: "Роли и профили доступа настроены, есть журналирование."
+    description_ru: >-
+      Роли и профили доступа настроены, есть
+      журналирование.
     tags: ["1c", "access_control"]
     answer_type: scale
     artifacts:
@@ -34,7 +38,8 @@ controls:
   - id: APP1C-003
     section: updates
     title_ru: "Регулярность обновлений"
-    description_ru: "Конфигурации 1С и СУБД обновляются по регламенту."
+    description_ru: >-
+      Конфигурации 1С и СУБД обновляются по регламенту.
     tags: ["1c", "patching"]
     answer_type: choice
     artifacts:
@@ -48,7 +53,9 @@ controls:
   - id: APP1C-004
     section: backup
     title_ru: "Резервирование баз 1С"
-    description_ru: "Бэкапы баз выполняются и проверяются восстановлением."
+    description_ru: >-
+      Бэкапы баз выполняются и проверяются
+      восстановлением.
     tags: ["1c", "backup"]
     answer_type: scale
     artifacts:

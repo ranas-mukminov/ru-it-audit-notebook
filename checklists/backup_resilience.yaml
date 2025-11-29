@@ -1,12 +1,16 @@
+---
 metadata:
   name: "Резервирование и устойчивость"
   version: "0.1"
-  description: "Базовые вопросы про бэкапы и восстановление"
+  description: >-
+    Базовые вопросы про бэкапы и восстановление
 controls:
   - id: BACKUP-001
     section: coverage
     title_ru: "Полнота охвата резервного копирования"
-    description_ru: "Ключевые сервисы и данные попадают в резервное копирование."
+    description_ru: >-
+      Ключевые сервисы и данные попадают в резервное
+      копирование.
     tags: ["backup", "coverage"]
     answer_type: scale
     artifacts:
@@ -20,7 +24,9 @@ controls:
   - id: BACKUP-002
     section: frequency
     title_ru: "Частота и регламент резервирования"
-    description_ru: "Определены интервалы, расписание и контроль выполнения."
+    description_ru: >-
+      Определены интервалы, расписание и контроль
+      выполнения.
     tags: ["backup", "process"]
     answer_type: scale
     artifacts:
@@ -34,7 +40,8 @@ controls:
   - id: BACKUP-003
     section: recovery_tests
     title_ru: "Тестирование восстановления"
-    description_ru: "Регулярно проверяется факт восстановления и время."
+    description_ru: >-
+      Регулярно проверяется факт восстановления и время.
     tags: ["backup", "drills"]
     answer_type: choice
     artifacts:
@@ -48,7 +55,9 @@ controls:
   - id: BACKUP-004
     section: ransomware
     title_ru: "Защищённость от ransomware"
-    description_ru: "Есть offsite/immutable копии и разделение привилегий."
+    description_ru: >-
+      Есть offsite/immutable копии и разделение
+      привилегий.
     tags: ["backup", "ransomware"]
     answer_type: boolean
     artifacts:
@@ -62,7 +71,8 @@ controls:
   - id: BACKUP-005
     section: monitoring
     title_ru: "Мониторинг задач резервирования"
-    description_ru: "Ошибки резервирования алертятся и разбираются."
+    description_ru: >-
+      Ошибки резервирования алертятся и разбираются.
     tags: ["backup", "monitoring"]
     answer_type: scale
     artifacts:

@@ -1,12 +1,16 @@
+---
 metadata:
   name: "Инвентаризация ИТ-ландшафта"
   version: "0.1"
-  description: "Базовый перечень серверов, сервисов и ответственных."
+  description: >-
+    Базовый перечень серверов, сервисов и ответственных.
 controls:
   - id: INV-001
     section: ownership
     title_ru: "Назначены владельцы систем"
-    description_ru: "Для каждой системы определён бизнес-владелец и технический куратор."
+    description_ru: >-
+      Для каждой системы определён бизнес-владелец и
+      технический куратор.
     tags: ["inventory", "ownership"]
     answer_type: boolean
     artifacts:
@@ -20,7 +24,8 @@ controls:
   - id: INV-002
     section: os_freshness
     title_ru: "Поддерживаемые версии ОС"
-    description_ru: "Все серверы работают на поддерживаемых версиях ОС."
+    description_ru: >-
+      Все серверы работают на поддерживаемых версиях ОС.
     tags: ["inventory", "os"]
     answer_type: choice
     artifacts:
@@ -34,7 +39,9 @@ controls:
   - id: INV-003
     section: backup
     title_ru: "Наличие резервных копий для ключевых систем"
-    description_ru: "У критичных сервисов есть регулярные резервные копии."
+    description_ru: >-
+      У критичных сервисов есть регулярные резервные
+      копии.
     tags: ["backup", "resilience"]
     answer_type: boolean
     artifacts:
@@ -48,7 +55,9 @@ controls:
   - id: INV-004
     section: environments
     title_ru: "Разделение окружений"
-    description_ru: "Prod/Stage/Dev разделены, есть базовые сетевые барьеры."
+    description_ru: >-
+      Prod/Stage/Dev разделены, есть базовые сетевые
+      барьеры.
     tags: ["network", "segmentation"]
     answer_type: scale
     artifacts:
@@ -62,7 +71,9 @@ controls:
   - id: INV-005
     section: monitoring
     title_ru: "Базовый мониторинг и алерты"
-    description_ru: "Здоровье серверов и сервисов отслеживается, алерты доставляются."
+    description_ru: >-
+      Здоровье серверов и сервисов отслеживается, алерты
+      доставляются.
     tags: ["monitoring", "logging"]
     answer_type: scale
     artifacts:
